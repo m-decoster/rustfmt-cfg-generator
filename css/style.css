@@ -52,3 +52,9 @@ pre {
 #footer {
     text-align: center;
 }
+
+#version {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
