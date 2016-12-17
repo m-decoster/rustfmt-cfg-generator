@@ -111,6 +111,74 @@ var options = [
     /* ------------------------------------------------ */
     [
         {
+            "description": "Braces on the same line (if and else)",
+            "example":
+`if(x == 42) <span class='hl'>{</span>
+    meaning_of_life = true;
+}`,
+            "key": "else_if_brace_style",
+            "value": '"AlwaysSameLine"',
+            "default": true
+        },
+        {
+            "description": "Braces on the next line (if and else)",
+            "example":
+`if(x == 42)
+<span class='hl'>{</span>
+    meaning_of_life = true;
+}`,
+            "key": "else_if_brace_style",
+            "value": '"AlwaysNextLine"',
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Braces on the same line (match/loop/for/while)",
+            "example":
+`loop <span class='hl'>{</span>
+    println!("yes");
+}`,
+            "key": "control_brace_style",
+            "value": '"AlwaysSameLine"',
+            "default": true
+        },
+        {
+            "description": "Braces on the next line (match/loop/for/while)",
+            "example":
+`loop
+<span class='hl'>{</span>
+    println!("yes");
+}`,
+            "key": "control_brace_style",
+            "value": '"AlwaysNextLine"',
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Empty impl bodies on one line",
+            "example":
+`impl MyStruct {<span class='hl'>}</span>`,
+            "key": "impl_empty_single_line",
+            "value": true,
+            "default": true
+        },
+        {
+            "description": "Empty impl bodies on two lines",
+            "example":
+`impl MyStruct {
+<span class='hl'>}</span>`,
+            "key": "impl_empty_single_line",
+            "value": false,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
             "description": "Empty function bodies on one line",
             "example":
 `fn empty_fun() {<span class='hl'>}</span>`,
@@ -127,5 +195,26 @@ var options = [
             "value": false,
             "default": false
         }
-    ]
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Single-line functions on one line",
+            "example":
+`fn add_two(x: i32) -> i32 <span class='hl'>{ x + 2 }</span>`,
+            "key": "fn_single_line",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Single-line functions as regular",
+            "example":
+`fn add_two(x: i32) -> i32 <span class='hl'>{
+    x + 2
+}</span>`,
+            "key": "fn_single_line",
+            "value": false,
+            "default": false
+        }
+    ],
 ];
