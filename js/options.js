@@ -1,31 +1,45 @@
+/*
+Contributing guidelines:
+
+- Make sure all keys and values are present and correct.
+- Use single and double quotes around string values.
+- Make sure that for each option, the default choice is first.
+- Use backticks for example code, to have multiline strings.
+- For example code, make sure there is no superfluous indentation.
+*/
+
 var options = [
     [
-        {
-            "description": "Use verbose rustfmt output",
-            "example": "",
-            "key": "verbose",
-            "value": true
-        },
         {
             "description": "Don't use verbose rustfmt output",
             "example": "",
             "key": "verbose",
-            "value": false
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Use verbose rustfmt output",
+            "example": "",
+            "key": "verbose",
+            "value": true,
+            "default": false
         }
     ],
     /* ------------------------------------------------ */
     [
         {
-            "description": "Reformat out of line modules",
-            "example": "",
-            "key": "skip_children",
-            "value": true
-        },
-        {
             "description": "Don't reformat out of line modules",
             "example": "",
             "key": "skip_children",
-            "value": false
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Reformat out of line modules",
+            "example": "",
+            "key": "skip_children",
+            "value": true,
+            "default": false
         }
     ],
     /* ------------------------------------------------ */
@@ -37,7 +51,8 @@ var options = [
     println!("Hello, world!");
 }`,
             "key": "fn_brace_style",
-            "value": '"SameLineWhere"'
+            "value": '"SameLineWhere"',
+            "default": true
         },
         {
             "description": "Braces on the next line (functions)",
@@ -47,7 +62,8 @@ var options = [
     println!("Hello, world!");
 }`,
             "key": "fn_brace_style",
-            "value": '"AlwaysNextLine"'
+            "value": '"AlwaysNextLine"',
+            "default": false
         }
     ],
     /* ------------------------------------------------ */
@@ -59,7 +75,8 @@ var options = [
     value: i32,
 }`,
             "key": "item_brace_style",
-            "value": '"SameLineWhere"'
+            "value": '"SameLineWhere"',
+            "default": true
         },
         {
             "description": "Braces on the next line (structs and enums)",
@@ -69,7 +86,8 @@ var options = [
     value: i32,
 }`,
             "key": "item_brace_style",
-            "value": '"AlwaysNextLine"'
+            "value": '"AlwaysNextLine"',
+            "default": false
         }
     ],
     /* ------------------------------------------------ */
@@ -79,7 +97,8 @@ var options = [
             "example":
 `fn empty_fun() {<span class='hl'>}</span>`,
             "key": "fn_empty_single_line",
-            "value": true
+            "value": true,
+            "default": true
         },
         {
             "description": "Empty function bodies on two lines",
@@ -87,7 +106,8 @@ var options = [
 `fn empty_fun() {
 <span class='hl'>}</span>`,
             "key": "fn_empty_single_line",
-            "value": false
+            "value": false,
+            "default": false
         }
     ]
 ];

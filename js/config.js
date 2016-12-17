@@ -14,7 +14,11 @@ function showOptions(index) {
         div.className += "option";
         div.addEventListener("click", createAddToConfigCallback(index, i));
         var description = document.createElement("h4");
-        description.innerHTML = currentOptions[i].description;
+        var checkmarkBallot = "&#10007; ";
+        if (currentOptions[i].default) {
+            checkmarkBallot = "&#10003; ";
+        }
+        description.innerHTML = checkmarkBallot + currentOptions[i].description;
         var code = document.createElement("pre");
         code.innerHTML = currentOptions[i].example;
 
