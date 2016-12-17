@@ -1,9 +1,13 @@
 body {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0 !important;
 }
 
 #header {
     text-align: center;
+    background-color: #F4511E;
+    margin: 0 !important;
+    padding: 2%;
 }
 
 #question {
@@ -59,4 +63,9 @@ pre {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+#help-contents {
+    width: 75%;
+    margin: auto;
 }
