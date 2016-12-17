@@ -1,0 +1,54 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#header {
+    text-align: center;
+}
+
+#question {
+    text-align: center;
+}
+
+#choices {
+    text-align: center;
+}
+
+.option {
+    display: inline-block;
+    border: 1px solid #AAAAAA;
+    cursor: pointer;
+    padding: 10px;
+    padding-top: 0px;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.hidden {
+    display: none;
+}
+
+#config-file {
+    border: 1px solid #AAAAAA;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+pre {
+    font-family: 'Ubuntu-Mono', monospace;
+    text-align: left;
+    display: block;
+}
+
+#counter {
+    text-align: center;
+}
+
+.hl {
+    background-color: yellow;
+}
+
+#footer {
+    text-align: center;
+}
