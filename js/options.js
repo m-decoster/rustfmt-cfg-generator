@@ -217,4 +217,116 @@ var options = [
             "default": false
         }
     ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Don't report TODO occurrences",
+            "example": "",
+            "key": "report_todo",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Report TODO occurrences",
+            "example": "",
+            "key": "report_todo",
+            "value": false,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Don't report FIXME occurrences",
+            "example": "",
+            "key": "report_fixme",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Report FIXME occurrences",
+            "example": "",
+            "key": "report_fixme",
+            "value": false,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Don't reorder imports alphabetically",
+            "example":
+`use <span class='hl'>some_module;</span>
+use <span class='hl'>module_b;</span>`,
+            "key": "reorder_imports",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Reorder imports alphabetically",
+            "example":
+`use <span class='hl'>module_b;</span>
+use <span class='hl'>some_module;</span>`,
+            "key": "reorder_imports",
+            "value": true,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Don't reorder import names alphabetically",
+            "example":
+`use some_module::{<span class='hl'>B, A</span>};`,
+            "key": "reorder_imported_names",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Reorder import names alphabetically",
+            "example":
+`use some_module::{<span class='hl'>A, B</span>};`,
+            "key": "reorder_imported_names",
+            "value": true,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Replace <code>/* */</code> by <code>//</code> where possible",
+            "example":
+`<span class='hl'>/*</span> Some comment <span class='hl'>*/</span>`,
+            "key": "normalize_comments",
+            "value": true,
+            "default": true
+        },
+        {
+            "description": "Don't replace <code>/* */</code> by <code>//</code>",
+            "example":
+`<span class='hl'>//</span> Some comment`,
+            "key": "normalize_comments",
+            "value": false,
+            "default": false
+        }
+    ],
+    /* ------------------------------------------------ */
+    [
+        {
+            "description": "Don't replace <code>try!</code> with <code>?</code>",
+            "example":
+`<span class='hl'>try!(</span>do_something()<span class='hl'>)</span>.and_something_else();`,
+            "key": "use_try_shorthand",
+            "value": false,
+            "default": true
+        },
+        {
+            "description": "Replace <code>try!</code> with <code>?</code>",
+            "example":
+`do_something()<span class='hl'>?</span>.and_something_else();`,
+            "key": "use_try_shorthand",
+            "value": true,
+            "default": false
+        }
+    ]
 ];
