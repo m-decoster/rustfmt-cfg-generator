@@ -88,3 +88,10 @@ pre {
     width: 75%;
     margin: auto;
 }
+
+#current-config {
+    border: 1px solid #AAAAAA;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}

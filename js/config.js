@@ -48,8 +48,12 @@ function showOptions(index) {
 
 function addToConfig(optionIndex, choiceIndex) {
     var choice = options[optionIndex][choiceIndex];
-    console.log("Adding: ", choice.key, choice.value);
     config[choice.key] = choice.value;
+    
+    var currentConfigString = generateConfigString(true);
+    var currentConfig = document.getElementById("current-config");
+    currentConfig.className = ""; // Remove hidden
+    currentConfig.innerHTML = currentConfigString;
 }
 
 function createAddToConfigCallback(optionIndex, choiceIndex) {
@@ -65,6 +69,7 @@ function createAddToConfigCallback(optionIndex, choiceIndex) {
 
 function generateConfigFile() {
     document.getElementById("counter").className += "hidden";
+    document.getElementById("current-config").className += "hidden";
 
     var questionDiv = document.getElementById("question-choice");
     questionDiv.className += "hidden";
@@ -73,18 +78,21 @@ function generateConfigFile() {
 
     document.getElementById("choices").innerHTML = "";
 
-    var configString = "";
-    for (var key in config) {
-        configString += key + " = " + config[key] + "\n";
-    }
+    var configString = generateConfigString();
 
     var configDiv = document.createElement("pre");
     configDiv.id = "config-file";
     configDiv.innerHTML = configString;
 
     document.getElementById("choices").appendChild(configDiv);
+}
 
-    console.log(configString);
+function generateConfigString() {
+    var configString = "";
+    for (var key in config) {
+        configString += key + " = " + config[key] + "\n";
+    }
+    return configString;
 }
 
 showOptions(0);
